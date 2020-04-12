@@ -20,6 +20,7 @@ class Map extends Component {
     const dataset = {
       data,
       info: {
+        // Kopplar den att detta ID är till datan?
         id: 'fin7fpx0d',
       },
     };
