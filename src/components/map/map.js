@@ -23,53 +23,29 @@ import { connect } from 'react-redux';
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
 import KeplerGl from 'kepler.gl';
 
-// Kepler.gl actions
 import { addDataToMap } from 'kepler.gl/actions';
-// Kepler.gl Data processing APIs
 import Processors from 'kepler.gl/processors';
 
-// Kepler.gl Schema APIs
-import KeplerGlSchema from 'kepler.gl/schemas';
-
-// Sample data
-import nycTrips from '../../data/ul-data-ver1.csv.js';
-import nycConfig from '../../data/ul-config';
+import edgeIndexes from '../../data/ul-data-ver1.csv.js';
+import ulConfig from '../../data/ul-config';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZXJpa25zb24iLCJhIjoiY2pqanh2ZWYxNGE0ZjN3bzM4M3Azdzl6cSJ9.UO94WxxiSiHrAaztMgy_Yg'; // eslint-disable-line
 
 class App extends Component {
   componentDidMount() {
-    // Use processCsvData helper to convert csv file into kepler.gl structure {fields, rows}
-    const data = Processors.processCsvData(nycTrips);
-    // Create dataset structure
+    // processCsvData to convert csv file into kepler.gl structure {fields, rows}
+    const data = Processors.processCsvData(edgeIndexes);
     const dataset = {
       data,
       info: {
-        // this is used to match the dataId defined in nyc-config.json. For more details see API documentation.
-        // It is paramount that this id matches your configuration otherwise the configuration file will be ignored.
         id: 'fin7fpx0d',
       },
     };
-    // addDataToMap action to inject dataset into kepler.gl instance
+    // addDataToMap to inject dataset into kepler.gl instance
     this.props.dispatch(
-      addDataToMap({ datasets: dataset, config: nycConfig, options: { centerMap: true, readOnly: true } })
+      addDataToMap({ datasets: dataset, config: ulConfig, options: { centerMap: true, readOnly: true } })
     );
   }
-
-  // This method is used as reference to show how to export the current kepler.gl instance configuration
-  // Once exported the configuration can be imported using parseSavedConfig or load method from KeplerGlSchema
-  getMapConfig() {
-    // retrieve kepler.gl store
-    const { keplerGl } = this.props;
-    // retrieve current kepler.gl instance store
-    const { map } = keplerGl;
-
-    // create the config object
-    return KeplerGlSchema.getConfigToSave(map);
-  }
-
-  // This method is used as reference to show how to export the current kepler.gl instance configuration
-  // Once exported the configuration can be imported using parseSavedConfig or load method from KeplerGlSchema
 
   render() {
     return (
