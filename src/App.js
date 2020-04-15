@@ -13,9 +13,11 @@ class App extends Component {
       <div className='App'>
         <div className='app-container'>
           <Landing />
-          <Provider store={store}>
-            <Map />
-          </Provider>
+        </div>
+        <Provider store={store}>
+          <Map />
+        </Provider>
+        <div className='app-container'>
           <Footer />
         </div>
       </div>
