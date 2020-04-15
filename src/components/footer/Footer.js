@@ -21,7 +21,7 @@ class Footer extends Component {
             <p>
               Made with <Emoji symbol='♥️' label='heart' /> and React. <br />
               GitHub repository is{' '}
-              <a href='https://github.com/eriknson/eriks-mapp-ts' target='_blank' rel='noopener noreferrer'>
+              <a href='https://github.com/eriknson/anomali' target='_blank' rel='noopener noreferrer'>
                 <u>here</u>
               </a>
             </p>
