@@ -22,13 +22,13 @@ class Header extends Component {
               <u>KoDa (Public Transport Data Lab)</u>
             </a>{' '}
             project. We have decided to do this using graph theory, and are developing a proof of concept showcasing (a
-            small part of) the fantastic possibilities and insights historic public transport data entails.
+            small part of) the fantastic possibilities historic public transport data entails.
           </p>
           <p>
             More specifically, our thesis project focuses on time schedule anomalies in the Uppsala Transit Network
-            (UL). To do this we have developed a pipeline that extracts, analyzes and aggregates 3.5M data points from
-            January 2020. The result is an objective index describing how vulnerable each part (edge) of the network is
-            (when it comes deviations from time table). And here's our attempt at visualizing parts of our work.
+            (UL). We have developed a pipeline that extracts, analyzes and aggregates 3.5M data points from January
+            2020. The result is an objective index describing how vulnerable each part (edge) of the network is (when it
+            comes deviations from time table). And here's our attempt at visualizing parts of our work.
           </p>
           <p>
             Feel to free to send us{' '}
