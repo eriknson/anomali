@@ -52,7 +52,7 @@ class App extends Component {
     };
     // addDataToMap action to inject dataset into kepler.gl instance
     this.props.dispatch(
-      addDataToMap({ datasets: dataset, config: nycConfig, options: { centerMap: true, readOnly: true } })
+      addDataToMap({ datasets: dataset, config: nycConfig, options: { centerMap: true, readOnly: false } })
     );
   }
 
