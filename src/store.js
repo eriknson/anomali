@@ -18,19 +18,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
-import {routerReducer, routerMiddleware} from 'react-router-redux';
-import {browserHistory} from 'react-router';
-import {enhanceReduxMiddleware} from 'kepler.gl/middleware';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
+import { browserHistory } from 'react-router';
+import { enhanceReduxMiddleware } from 'kepler.gl/middleware';
 import thunk from 'redux-thunk';
-// eslint-disable-next-line no-unused-vars
-import window from 'global/window';
 
 import demoReducer from './reducers/index';
 
 const reducers = combineReducers({
   demo: demoReducer,
-  routing: routerReducer
+  routing: routerReducer,
 });
 
 export const middlewares = enhanceReduxMiddleware([thunk, routerMiddleware(browserHistory)]);

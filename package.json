@@ -6,7 +6,10 @@
     "start-local-e2e": "webpack-dev-server --mode development --env.es6",
     "start-local-deck": "webpack-dev-server --mode development --env.es6 --env.deck --progress --hot --open",
     "start-local-deck-src": "webpack-dev-server --mode development --env.es6 --env.deck_src --progress --hot --open",
-    "start-local-https": "webpack-dev-server --mode development --https --env.es6 --progress --hot --open"
+    "start-local-https": "webpack-dev-server --mode development --https --env.es6 --progress --hot --open",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@carto/toolkit": "0.0.1-rc.18",

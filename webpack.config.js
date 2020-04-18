@@ -64,11 +64,6 @@ const CONFIG = {
   devServer: {
     historyApiFallback: true,
   },
-
-  // Optional: Enables reading mapbox and dropbox client token from environment variable
-  plugins: [
-    new webpack.EnvironmentPlugin(['MapboxAccessToken', 'DropboxClientId', 'MapboxExportToken', 'CartoClientId']),
-  ],
 };
 
 // This line enables bundling against src in this repo rather than installed deck.gl module
