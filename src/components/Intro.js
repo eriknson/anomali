@@ -36,11 +36,15 @@ class Intro extends Component {
             deviate from schedule. And here's our attempt at visualize this.
           </p>
           <p>
-            Feel to free to send us{" "}
+            Feel to free to send{" "}
             <a href="mailto:eriks@mail.se">
-              <u>an e-mail</u>
+              <u>Erik</u>
             </a>{" "}
-            if you have any question(s). Enjoy!
+            or{" "}
+            <a href="mailto:axelbomans@gmail.com">
+              <u>Axel</u>
+            </a>{" "}
+            an e-mail if you have any question(s). Enjoy!
           </p>
         </div>
       </div>

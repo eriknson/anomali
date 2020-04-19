@@ -11,7 +11,7 @@ class Footer extends Component {
                 <u>eriks@mail.se</u>
               </a>{" "}
               <br />
-              <a href="mailto:eriks@mail.se">
+              <a href="mailto:axelbomans@gmail.com">
                 <u>axelbomans@gmail.com</u>
               </a>{" "}
             </p>
