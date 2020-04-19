@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/anomali/static/css/main.e0b18ce2.chunk.css",
-    "main.js": "/anomali/static/js/main.dcfeb973.chunk.js",
-    "main.js.map": "/anomali/static/js/main.dcfeb973.chunk.js.map",
+    "main.js": "/anomali/static/js/main.20eea140.chunk.js",
+    "main.js.map": "/anomali/static/js/main.20eea140.chunk.js.map",
     "runtime-main.js": "/anomali/static/js/runtime-main.741d33bb.js",
     "runtime-main.js.map": "/anomali/static/js/runtime-main.741d33bb.js.map",
     "static/css/2.75edc52f.chunk.css": "/anomali/static/css/2.75edc52f.chunk.css",
     "static/js/2.ff1f4a31.chunk.js": "/anomali/static/js/2.ff1f4a31.chunk.js",
     "static/js/2.ff1f4a31.chunk.js.map": "/anomali/static/js/2.ff1f4a31.chunk.js.map",
     "index.html": "/anomali/index.html",
-    "precache-manifest.ae202f2e8df7f457bea16fa7eed7fd47.js": "/anomali/precache-manifest.ae202f2e8df7f457bea16fa7eed7fd47.js",
+    "precache-manifest.96eb9dce6e787933d561626bc3bd58d4.js": "/anomali/precache-manifest.96eb9dce6e787933d561626bc3bd58d4.js",
     "service-worker.js": "/anomali/service-worker.js",
     "static/css/2.75edc52f.chunk.css.map": "/anomali/static/css/2.75edc52f.chunk.css.map",
     "static/css/main.e0b18ce2.chunk.css.map": "/anomali/static/css/main.e0b18ce2.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.75edc52f.chunk.css",
     "static/js/2.ff1f4a31.chunk.js",
     "static/css/main.e0b18ce2.chunk.css",
-    "static/js/main.dcfeb973.chunk.js"
+    "static/js/main.20eea140.chunk.js"
   ]
 }
