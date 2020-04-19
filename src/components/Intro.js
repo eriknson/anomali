@@ -40,7 +40,7 @@ class Intro extends Component {
             <a href="mailto:eriks@mail.se">
               <u>Erik</u>
             </a>{" "}
-            or{" "}
+            /{" "}
             <a href="mailto:axelbomans@gmail.com">
               <u>Axel</u>
             </a>{" "}
