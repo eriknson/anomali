@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
-import './App.css';
+import React, { Component } from "react";
+import { Provider } from "react-redux";
+import store from "./store/Store";
+import "./App.css";
 
-import Landing from './components/landing/Landing';
-import Footer from './components/footer/Footer';
-import Outro from './components/outro/Outro';
-import Map from './components/map/Map';
+import Map from "./components/Map";
+import Intro from "./components/Intro";
+import Footer from "./components/Footer";
 
 class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <div className='app-container'>
-          <Landing />
+      <Provider store={store}>
+        <div className="App">
+          <div className="app-container">
+            <Intro />
+          </div>
+          <div style={{ height: "800px", width: "100%" }}>
+            <Map />
+          </div>
+          <div className="app-container">
+            <Footer />
+          </div>
         </div>
-        <Provider store={store}>
-          <Map />
-        </Provider>
-        <div className='app-container'>
-          <Footer />
-        </div>
-      </div>
+      </Provider>
     );
   }
 }

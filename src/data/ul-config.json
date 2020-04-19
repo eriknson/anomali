@@ -5,12 +5,12 @@
       "filters": [],
       "layers": [
         {
-          "id": "3d9t6pt",
+          "id": "vxz06u",
           "type": "line",
           "config": {
-            "dataId": "fin7fpx0d",
-            "label": "edge",
-            "color": [136, 87, 44, 255],
+            "dataId": "7b2ttp",
+            "label": "Edges",
+            "color": [136, 87, 44],
             "columns": {
               "lat0": "source_lat",
               "lng0": "source_lon",
@@ -19,26 +19,39 @@
             },
             "isVisible": true,
             "visConfig": {
-              "opacity": 0.76,
-              "thickness": 4,
+              "opacity": 0.8,
+              "thickness": 3,
               "colorRange": {
-                "name": "Uber Viz Diverging 1.5",
-                "type": "diverging",
-                "category": "Uber",
-                "colors": ["#00939C", "#5DBABF", "#BAE1E2", "#F8C0AA", "#DD7755", "#C22E00"],
-                "reversed": false
+                "name": "Custom Palette",
+                "type": "custom",
+                "category": "Custom",
+                "colors": [
+                  "#00939C",
+                  "#2FA7AE",
+                  "#5DBABF",
+                  "#c2c2c2",
+                  "#E4E4E4",
+                  "#ffffff",
+                  "#e4e4e4",
+                  "#C2C2C2",
+                  "#DD7755",
+                  "#D0532B",
+                  "#C22E00"
+                ]
               },
               "sizeRange": [0, 10],
-              "targetColor": null,
-              "hi-precision": true
+              "targetColor": null
             },
-            "textLabel": {
-              "field": null,
-              "color": [255, 255, 255],
-              "size": 50,
-              "offset": [0, 0],
-              "anchor": "middle"
-            }
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
           },
           "visualChannels": {
             "colorField": {
@@ -49,125 +62,51 @@
             "sizeField": null,
             "sizeScale": "linear"
           }
-        },
-        {
-          "id": "0kq17y",
-          "type": "point",
-          "config": {
-            "dataId": "fin7fpx0d",
-            "label": "source",
-            "color": [84, 84, 84, 255],
-            "columns": {
-              "lat": "source_lat",
-              "lng": "source_lon",
-              "altitude": null
-            },
-            "isVisible": false,
-            "visConfig": {
-              "radius": 10,
-              "fixedRadius": false,
-              "opacity": 0.11,
-              "outline": true,
-              "thickness": 3,
-              "colorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
-              },
-              "radiusRange": [0, 50],
-              "hi-precision": false
-            },
-            "textLabel": {
-              "field": null,
-              "color": [255, 255, 255, 255],
-              "size": 35,
-              "offset": [0, 0],
-              "anchor": "middle"
-            }
-          },
-          "visualChannels": {
-            "colorField": null,
-            "colorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear"
-          }
-        },
-        {
-          "id": "j9ltaya",
-          "type": "point",
-          "config": {
-            "dataId": "fin7fpx0d",
-            "label": "sink",
-            "color": [214, 214, 213, 255],
-            "columns": {
-              "lat": "sink_lat",
-              "lng": "sink_lon",
-              "altitude": null
-            },
-            "isVisible": false,
-            "visConfig": {
-              "radius": 6,
-              "fixedRadius": false,
-              "opacity": 0.2,
-              "outline": false,
-              "thickness": 2,
-              "colorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
-              },
-              "radiusRange": [0, 50],
-              "hi-precision": false
-            },
-            "textLabel": {
-              "field": null,
-              "color": [255, 255, 255],
-              "size": 50,
-              "offset": [0, 0],
-              "anchor": "middle"
-            }
-          },
-          "visualChannels": {
-            "colorField": null,
-            "colorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear"
-          }
         }
       ],
       "interactionConfig": {
         "tooltip": {
           "fieldsToShow": {
-            "fin7fpx0d": ["source_name", "sink_name", "Record Count", "delay", "delay / travel time"]
+            "7b2ttp": [
+              "source_id",
+              "sink_id",
+              "source_name",
+              "sink_name",
+              "Record Count",
+              "delay",
+              "delay / travel time"
+            ]
           },
           "enabled": true
         },
         "brush": {
           "size": 0.5,
           "enabled": false
+        },
+        "coordinate": {
+          "enabled": false
         }
       },
       "layerBlending": "normal",
-      "splitMaps": []
+      "splitMaps": [],
+      "animationConfig": {
+        "currentTime": null,
+        "speed": 1
+      }
     },
     "mapState": {
       "bearing": 24,
       "dragRotate": true,
-      "latitude": 59.89774947849676,
-      "longitude": 17.59417690279035,
-      "pitch": 58,
-      "zoom": 9,
+      "latitude": 60.00569,
+      "longitude": 17.625749499999998,
+      "pitch": 50,
+      "zoom": 8,
       "isSplit": false
     },
     "mapStyle": {
       "styleType": "dark",
       "topLayerGroups": {
-        "label": true,
-        "land": false,
-        "water": false,
-        "building": false
+        "label": true
       },
       "visibleLayerGroups": {
         "label": true,
@@ -175,8 +114,10 @@
         "border": true,
         "building": true,
         "water": true,
-        "land": true
+        "land": true,
+        "3d building": false
       },
+      "threeDBuildingColor": [25, 20, 16],
       "mapStyles": {}
     }
   }
