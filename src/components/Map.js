@@ -8,7 +8,7 @@ import Processors from "kepler.gl/processors";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
-import ulData from "../data/ul-edges-index.csv.js";
+import ulData from "../data/ul-aggregated_all-edges.csv";
 import ulConfig from "../data/ul-config.json";
 
 class Map extends Component {
