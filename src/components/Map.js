@@ -25,13 +25,13 @@ class Map extends Component {
         datasets: [
           {
             info: {
-              id: "7b2ttp",
+              id: "7b2tp",
               label: "Uppsala Network – aggregated edge indexes",
             },
             data: structuredEdgeData,
           },
           {
-            info: { id: "9jdgb8y7", label: "Uppsala Network – mincut values" },
+            info: { id: "9jgb8y7", label: "Uppsala Network – mincut values" },
             data: structuredCutData,
           },
         ],

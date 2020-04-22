@@ -24,16 +24,18 @@ class Intro extends Component {
             <a href="https://www.ri.se/sv/vad-vi-gor/projekt/koda">
               <u>KoDa</u>
             </a>
-            ). As a part of our Master Thesis, we are developing a proof of
-            concept using graph theory to assess weak spots (in terms of time
-            table deviations) in the Uppsala Transit Network (UL)
+            ). As a part of our project, we are developing a proof of concept to
+            assess weak spots (in terms of time table deviations) using graph
+            theory in the Uppsala Transit Network (UL)
           </p>
           <p>
-            More specifically, our thesis project focuses on anomalies and we
-            have developed a pipeline that extracts, analyzes and aggregates
-            3.5M data points from January 2020. The result is an index
-            describing how vulnerable each part (edge) of the network is to
-            deviate from schedule. And here's our attempt at visualize this.
+            More specifically, we have developed a pipeline that extracts,
+            aggregates and analyzes 3.5M data points from January 2020. The
+            result is an index describing how likely each node-pair (edge) in
+            the network is to deviate from schedule (the lines). Then, in order
+            to identify the most vulnerable part(s) / extension(s) in the
+            network, we assess them using the MINCUT-MAXFLOW algorithm (the
+            arcs). And here's our attempt to visualize this.
           </p>
           <p>
             Feel to free to send{" "}
