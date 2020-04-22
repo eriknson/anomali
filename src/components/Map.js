@@ -8,20 +8,33 @@ import Processors from "kepler.gl/processors";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
-import ulData from "../data/ul-aggregated_all-edges.csv";
+import {
+  ulAggregatedEdgeIndex,
+  ulMincutValues,
+} from "../data/ul-aggregated_all-edges";
 import ulConfig from "../data/ul-config.json";
 
 class Map extends Component {
   state = {};
 
   componentDidMount() {
-    const structuredData = Processors.processCsvData(ulData);
+    const structuredEdgeData = Processors.processCsvData(ulAggregatedEdgeIndex);
+    const structuredCutData = Processors.processCsvData(ulMincutValues);
     this.props.dispatch(
       addDataToMap({
-        datasets: {
-          info: { id: "7b2ttp", label: "Uppsala Network (UL)" },
-          data: structuredData,
-        },
+        datasets: [
+          {
+            info: {
+              id: "7b2ttp",
+              label: "Uppsala Network – aggregated edge indexes",
+            },
+            data: structuredEdgeData,
+          },
+          {
+            info: { id: "9jdgb8y7", label: "Uppsala Network – mincut values" },
+            data: structuredCutData,
+          },
+        ],
         option: {
           centerMap: true,
           readOnly: true,

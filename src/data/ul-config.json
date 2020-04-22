@@ -2,14 +2,140 @@
   "version": "v1",
   "config": {
     "visState": {
-      "filters": [],
+      "filters": [
+        {
+          "dataId": ["9jdgb8y7"],
+          "id": "t4gg60mc",
+          "name": ["cut_value"],
+          "type": "range",
+          "value": [0, 3.39],
+          "enlarged": false,
+          "plotType": "histogram",
+          "yAxis": null
+        }
+      ],
       "layers": [
+        {
+          "id": "evjuopc",
+          "type": "point",
+          "config": {
+            "dataId": "9jdgb8y7",
+            "label": "sink",
+            "color": [240, 237, 234],
+            "columns": {
+              "lat": "sink_lat",
+              "lng": "sink_lon",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 5,
+              "fixedRadius": false,
+              "opacity": 0.03,
+              "outline": false,
+              "thickness": 2,
+              "strokeColor": null,
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
+              },
+              "radiusRange": [0, 50],
+              "filled": true
+            },
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantile",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        },
+        {
+          "id": "hqsj2hr",
+          "type": "arc",
+          "config": {
+            "dataId": "9jdgb8y7",
+            "label": "mincut-maxflow",
+            "color": [146, 38, 198],
+            "columns": {
+              "lat0": "source_lat",
+              "lng0": "source_lon",
+              "lat1": "sink_lat",
+              "lng1": "sink_lon"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.02,
+              "thickness": 2,
+              "colorRange": {
+                "name": "ColorBrewer OrRd-9",
+                "type": "sequential",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#fff7ec",
+                  "#fee8c8",
+                  "#fdd49e",
+                  "#fdbb84",
+                  "#fc8d59",
+                  "#ef6548",
+                  "#d7301f",
+                  "#b30000",
+                  "#7f0000"
+                ]
+              },
+              "sizeRange": [0.1, 60],
+              "targetColor": null
+            },
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "cut_value",
+              "type": "real"
+            },
+            "colorScale": "quantize",
+            "sizeField": {
+              "name": "cut_value",
+              "type": "real"
+            },
+            "sizeScale": "sqrt"
+          }
+        },
         {
           "id": "vxz06u",
           "type": "line",
           "config": {
             "dataId": "7b2ttp",
-            "label": "Edges",
+            "label": "edge",
             "color": [136, 87, 44],
             "columns": {
               "lat0": "source_lat",
@@ -19,8 +145,8 @@
             },
             "isVisible": true,
             "visConfig": {
-              "opacity": 0.8,
-              "thickness": 3,
+              "opacity": 0.5,
+              "thickness": 2,
               "colorRange": {
                 "name": "Custom Palette",
                 "type": "custom",
@@ -75,7 +201,8 @@
               "Record Count",
               "delay",
               "delay / travel time"
-            ]
+            ],
+            "9jdgb8y7": ["cut_value", "source_id", "source_name", "sink_id", "sink_name"]
           },
           "enabled": true
         },
@@ -97,10 +224,10 @@
     "mapState": {
       "bearing": 24,
       "dragRotate": true,
-      "latitude": 60.00569,
-      "longitude": 17.625749499999998,
+      "latitude": 59.94790413815471,
+      "longitude": 17.66089651901541,
       "pitch": 50,
-      "zoom": 8,
+      "zoom": 7.611348130099264,
       "isSplit": false
     },
     "mapStyle": {
