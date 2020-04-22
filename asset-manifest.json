@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/anomali/static/css/main.e0b18ce2.chunk.css",
-    "main.js": "/anomali/static/js/main.abd17881.chunk.js",
-    "main.js.map": "/anomali/static/js/main.abd17881.chunk.js.map",
+    "main.js": "/anomali/static/js/main.81a8a6d1.chunk.js",
+    "main.js.map": "/anomali/static/js/main.81a8a6d1.chunk.js.map",
     "runtime-main.js": "/anomali/static/js/runtime-main.741d33bb.js",
     "runtime-main.js.map": "/anomali/static/js/runtime-main.741d33bb.js.map",
     "static/css/2.75edc52f.chunk.css": "/anomali/static/css/2.75edc52f.chunk.css",
-    "static/js/2.ff1f4a31.chunk.js": "/anomali/static/js/2.ff1f4a31.chunk.js",
-    "static/js/2.ff1f4a31.chunk.js.map": "/anomali/static/js/2.ff1f4a31.chunk.js.map",
+    "static/js/2.1ce40ddd.chunk.js": "/anomali/static/js/2.1ce40ddd.chunk.js",
+    "static/js/2.1ce40ddd.chunk.js.map": "/anomali/static/js/2.1ce40ddd.chunk.js.map",
     "index.html": "/anomali/index.html",
-    "precache-manifest.b405900410c1aac33b32fd4e1a17f593.js": "/anomali/precache-manifest.b405900410c1aac33b32fd4e1a17f593.js",
+    "precache-manifest.cf5d7432436ae1808dbcb5973a8374ff.js": "/anomali/precache-manifest.cf5d7432436ae1808dbcb5973a8374ff.js",
     "service-worker.js": "/anomali/service-worker.js",
     "static/css/2.75edc52f.chunk.css.map": "/anomali/static/css/2.75edc52f.chunk.css.map",
     "static/css/main.e0b18ce2.chunk.css.map": "/anomali/static/css/main.e0b18ce2.chunk.css.map",
-    "static/js/2.ff1f4a31.chunk.js.LICENSE.txt": "/anomali/static/js/2.ff1f4a31.chunk.js.LICENSE.txt"
+    "static/js/2.1ce40ddd.chunk.js.LICENSE.txt": "/anomali/static/js/2.1ce40ddd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.741d33bb.js",
     "static/css/2.75edc52f.chunk.css",
-    "static/js/2.ff1f4a31.chunk.js",
+    "static/js/2.1ce40ddd.chunk.js",
     "static/css/main.e0b18ce2.chunk.css",
-    "static/js/main.abd17881.chunk.js"
+    "static/js/main.81a8a6d1.chunk.js"
   ]
 }
