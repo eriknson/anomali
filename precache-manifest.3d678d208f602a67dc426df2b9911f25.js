@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dff30c86e8ff1c8c64bc4d9e3072221",
+    "revision": "851b2554bf16652e800cb516398e2951",
     "url": "/anomali/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/anomali/static/css/2.75edc52f.chunk.css"
   },
   {
-    "revision": "064c25c58455dda5ce50",
+    "revision": "c943900e0c3323e8106a",
     "url": "/anomali/static/css/main.e0b18ce2.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/anomali/static/js/2.1ce40ddd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "064c25c58455dda5ce50",
-    "url": "/anomali/static/js/main.c8a3ca47.chunk.js"
+    "revision": "c943900e0c3323e8106a",
+    "url": "/anomali/static/js/main.f5f221d3.chunk.js"
   },
   {
     "revision": "3d78f87638210a8f4bc2",
