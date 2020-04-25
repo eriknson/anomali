@@ -78,10 +78,10 @@
             "visConfig": {
               "radius": 33.5,
               "fixedRadius": false,
-              "opacity": 0.15,
+              "opacity": 0.01,
               "outline": true,
-              "thickness": 2,
-              "strokeColor": [253, 167, 0],
+              "thickness": 1,
+              "strokeColor": [100, 100, 100],
               "colorRange": {
                 "name": "Global Warming",
                 "type": "sequential",

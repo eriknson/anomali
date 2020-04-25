@@ -15,9 +15,7 @@ class App extends Component {
           <div className="app-container">
             <Intro />
           </div>
-          <div style={{ height: "650px", width: "100%" }}>
-            <Map />
-          </div>
+          <Map />
           <div className="app-container">
             <Footer />
           </div>
