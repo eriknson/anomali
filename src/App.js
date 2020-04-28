@@ -5,6 +5,7 @@ import "./App.css";
 
 import Map from "./components/Map";
 import Intro from "./components/Intro";
+import Description from "./components/Description";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           </div>
           <Map />
           <div className="app-container">
+            <Description />
             <Footer />
           </div>
         </div>
