@@ -2,19 +2,58 @@
   "version": "v1",
   "config": {
     "visState": {
-      "filters": [
-        {
-          "dataId": ["9jgb8y7"],
-          "id": "n9rrb8vl7",
-          "name": ["non_reachable"],
-          "type": "range",
-          "value": [2, 48],
-          "enlarged": false,
-          "plotType": "histogram",
-          "yAxis": null
-        }
-      ],
+      "filters": [],
       "layers": [
+        {
+          "id": "jnpgion",
+          "type": "line",
+          "config": {
+            "dataId": "r7j9tcouu",
+            "label": "flow & deviation",
+            "color": [146, 38, 198],
+            "columns": {
+              "lat0": "source_lat",
+              "lng0": "source_lon",
+              "lat1": "sink_lat",
+              "lng1": "sink_lon"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.5,
+              "thickness": 2,
+              "colorRange": {
+                "name": "Custom Palette",
+                "type": "custom",
+                "category": "Custom",
+                "colors": ["#EB2949", "#f13856", "#ffc8cf", "#ffdee1", "#ffe7e8", "#ffeeef", "#fff4f4", "#fcf0f0"]
+              },
+              "sizeRange": [0.3, 25],
+              "targetColor": null
+            },
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "relative_deviation_factor",
+              "type": "real"
+            },
+            "colorScale": "quantile",
+            "sizeField": {
+              "name": "flow",
+              "type": "real"
+            },
+            "sizeScale": "linear"
+          }
+        },
         {
           "id": "f6ltqbe",
           "type": "line",
@@ -28,7 +67,7 @@
               "lat1": "sink_lat",
               "lng1": "sink_lon"
             },
-            "isVisible": true,
+            "isVisible": false,
             "visConfig": {
               "opacity": 0.12,
               "thickness": 2,
@@ -74,7 +113,7 @@
               "lng": "source_lon",
               "altitude": null
             },
-            "isVisible": true,
+            "isVisible": false,
             "visConfig": {
               "radius": 33.5,
               "fixedRadius": false,
@@ -129,7 +168,7 @@
               "lng": "sink_lon",
               "altitude": null
             },
-            "isVisible": true,
+            "isVisible": false,
             "visConfig": {
               "radius": 6,
               "fixedRadius": false,
@@ -185,7 +224,7 @@
               "lat1": "sink_lat",
               "lng1": "sink_lon"
             },
-            "isVisible": true,
+            "isVisible": false,
             "visConfig": {
               "opacity": 0.04,
               "thickness": 0.5,
@@ -236,7 +275,16 @@
               "delay",
               "delay / travel time"
             ],
-            "9jgb8y7": ["cut_value", "reachable", "non_reachable", "source_id", "source_name", "sink_id", "sink_name"]
+            "9jgb8y7": ["cut_value", "reachable", "non_reachable", "source_id", "source_name", "sink_id", "sink_name"],
+            "r7j9tcouu": [
+              "edge_id",
+              "source_name",
+              "sink_name",
+              "record_count",
+              "scheduled",
+              "flow",
+              "relative_deviation_factor"
+            ]
           },
           "enabled": true
         },
@@ -256,23 +304,28 @@
       }
     },
     "mapState": {
-      "bearing": 24,
+      "bearing": 0,
       "dragRotate": true,
-      "latitude": 59.844134783108444,
-      "longitude": 17.411023752182338,
+      "latitude": 59.719031403986584,
+      "longitude": 17.48289114957023,
       "pitch": 60,
-      "zoom": 2.26274286529636,
+      "zoom": 9.920894627985861,
       "isSplit": false
     },
     "mapStyle": {
       "styleType": "dark",
       "topLayerGroups": {
-        "label": true
+        "label": true,
+        "road": false,
+        "border": false,
+        "building": true,
+        "water": false,
+        "land": false
       },
       "visibleLayerGroups": {
         "label": true,
         "road": true,
-        "border": true,
+        "border": false,
         "building": true,
         "water": true,
         "land": true,

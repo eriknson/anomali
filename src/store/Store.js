@@ -5,7 +5,7 @@ import { taskMiddleware } from "react-palm/tasks";
 const initialState = {};
 
 const customizedKeplerGlReducer = keplerGlReducer.initialState({
-  uiState: { readOnly: true },
+  uiState: { readOnly: false },
 });
 
 const reducers = combineReducers({

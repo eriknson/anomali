@@ -11,12 +11,14 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import {
   ulAggregatedEdgeIndex,
   ulMincutValues,
+  ulFlow,
 } from "../data/ul-aggregated_all-edges";
 import ulConfig from "../data/ul-config.json";
 
 // structure and label data so kepler likes it
 const structuredEdgeData = Processors.processCsvData(ulAggregatedEdgeIndex);
 const structuredCutData = Processors.processCsvData(ulMincutValues);
+const structuredFlowData = Processors.processCsvData(ulFlow);
 const data = {
   datasets: [
     {
@@ -30,10 +32,14 @@ const data = {
       info: { id: "9jgb8y7", label: "Uppsala Network – mincut values" },
       data: structuredCutData,
     },
+    {
+      info: { id: "r7j9tcouu", label: "Uppsala Network – flow" },
+      data: structuredFlowData,
+    },
   ],
   option: {
     centerMap: true,
-    readOnly: true,
+    readOnly: false,
   },
   info: {
     title: "Anomali",
