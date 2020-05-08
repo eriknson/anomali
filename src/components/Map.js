@@ -8,28 +8,16 @@ import Processors from "kepler.gl/processors";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 // import data and config for the Uppsala Network (UL)
-import {
-  ulAggregatedEdgeIndex,
-  ulMincutValues,
-  ulFlow,
-} from "../data/ul-aggregated_all-edges";
+import { ulMincutValues, ulFlow } from "../data/ul-aggregated_all-edges";
 import ulConfig from "../data/ul-config.json";
 
 // structure and label data so kepler likes it
-const structuredEdgeData = Processors.processCsvData(ulAggregatedEdgeIndex);
 const structuredCutData = Processors.processCsvData(ulMincutValues);
 const structuredFlowData = Processors.processCsvData(ulFlow);
 const data = {
   datasets: [
     {
-      info: {
-        id: "7b2tp",
-        label: "Uppsala Network – aggregated edge indexes",
-      },
-      data: structuredEdgeData,
-    },
-    {
-      info: { id: "9jgb8y7", label: "Uppsala Network – mincut values" },
+      info: { id: "gdzs84xm0o", label: "Uppsala Network – vulnerability" },
       data: structuredCutData,
     },
     {
@@ -39,7 +27,7 @@ const data = {
   ],
   option: {
     centerMap: true,
-    readOnly: false,
+    readOnly: true,
   },
   info: {
     title: "Anomali",

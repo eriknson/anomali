@@ -2,8 +2,101 @@
   "version": "v1",
   "config": {
     "visState": {
-      "filters": [],
+      "filters": [
+        {
+          "dataId": ["gdzs84xm0o"],
+          "id": "87bmqnamk",
+          "name": ["cut_value"],
+          "type": "range",
+          "value": [0, 670],
+          "enlarged": false,
+          "plotType": "histogram",
+          "yAxis": null
+        },
+        {
+          "dataId": ["gdzs84xm0o"],
+          "id": "1kzratte",
+          "name": ["non_reachable"],
+          "type": "range",
+          "value": [30, 2953],
+          "enlarged": false,
+          "plotType": "histogram",
+          "yAxis": null
+        }
+      ],
       "layers": [
+        {
+          "id": "a59qy94",
+          "type": "point",
+          "config": {
+            "dataId": "gdzs84xm0o",
+            "label": "vulnerability",
+            "color": [136, 87, 44],
+            "columns": {
+              "lat": "sink_lat",
+              "lng": "sink_lon",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 10,
+              "fixedRadius": false,
+              "opacity": 0.2,
+              "outline": false,
+              "thickness": 2,
+              "strokeColor": null,
+              "colorRange": {
+                "name": "Custom Palette",
+                "type": "custom",
+                "category": "Custom",
+                "colors": [
+                  "#dd643e",
+                  "#eeb19c",
+                  "#B7E2E4",
+                  "#b2e3e6",
+                  "#a9dbdd",
+                  "#9bd4d6",
+                  "#8CCED1",
+                  "#5DBABF",
+                  "#2FA7AE",
+                  "#00939C"
+                ]
+              },
+              "strokeColorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
+              },
+              "radiusRange": [5, 80],
+              "filled": true
+            },
+            "textLabel": [
+              {
+                "field": null,
+                "color": [255, 255, 255],
+                "size": 18,
+                "offset": [0, 0],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "cut_value",
+              "type": "real"
+            },
+            "colorScale": "quantize",
+            "strokeColorField": null,
+            "strokeColorScale": "quantile",
+            "sizeField": {
+              "name": "non_reachable",
+              "type": "integer"
+            },
+            "sizeScale": "sqrt"
+          }
+        },
         {
           "id": "jnpgion",
           "type": "line",
@@ -19,15 +112,15 @@
             },
             "isVisible": true,
             "visConfig": {
-              "opacity": 0.5,
+              "opacity": 0.4,
               "thickness": 2,
               "colorRange": {
                 "name": "Custom Palette",
                 "type": "custom",
                 "category": "Custom",
-                "colors": ["#EB2949", "#f13856", "#ffc8cf", "#ffdee1", "#ffe7e8", "#ffeeef", "#fff4f4", "#fcf0f0"]
+                "colors": ["#EB2949", "#ff98a5", "#ffc8cf", "#ffdee1", "#ffe7e8", "#ffeeef", "#fff4f4", "#fcf0f0"]
               },
-              "sizeRange": [0.3, 25],
+              "sizeRange": [0.3, 15],
               "targetColor": null
             },
             "textLabel": [
@@ -53,237 +146,29 @@
             },
             "sizeScale": "linear"
           }
-        },
-        {
-          "id": "f6ltqbe",
-          "type": "line",
-          "config": {
-            "dataId": "7b2tp",
-            "label": "edge",
-            "color": [136, 87, 44],
-            "columns": {
-              "lat0": "source_lat",
-              "lng0": "source_lon",
-              "lat1": "sink_lat",
-              "lng1": "sink_lon"
-            },
-            "isVisible": false,
-            "visConfig": {
-              "opacity": 0.12,
-              "thickness": 2,
-              "colorRange": {
-                "name": "Custom Palette",
-                "type": "custom",
-                "category": "Custom",
-                "colors": ["#FFFFFF", "#EAF1F8", "#eaf3fc", "#e8f3fd", "#fdcdc6", "#fdc1b8", "#ff7669", "#FF5544"]
-              },
-              "sizeRange": [0, 10],
-              "targetColor": null
-            },
-            "textLabel": [
-              {
-                "field": null,
-                "color": [255, 255, 255],
-                "size": 18,
-                "offset": [0, 0],
-                "anchor": "start",
-                "alignment": "center"
-              }
-            ]
-          },
-          "visualChannels": {
-            "colorField": {
-              "name": "delay / travel time",
-              "type": "real"
-            },
-            "colorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear"
-          }
-        },
-        {
-          "id": "ahovytn",
-          "type": "point",
-          "config": {
-            "dataId": "9jgb8y7",
-            "label": "source",
-            "color": [254, 238, 232],
-            "columns": {
-              "lat": "source_lat",
-              "lng": "source_lon",
-              "altitude": null
-            },
-            "isVisible": false,
-            "visConfig": {
-              "radius": 33.5,
-              "fixedRadius": false,
-              "opacity": 0.01,
-              "outline": true,
-              "thickness": 1,
-              "strokeColor": [100, 100, 100],
-              "colorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
-              },
-              "strokeColorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
-              },
-              "radiusRange": [0, 50],
-              "filled": false
-            },
-            "textLabel": [
-              {
-                "field": null,
-                "color": [255, 255, 255],
-                "size": 18,
-                "offset": [0, 0],
-                "anchor": "start",
-                "alignment": "center"
-              }
-            ]
-          },
-          "visualChannels": {
-            "colorField": null,
-            "colorScale": "quantile",
-            "strokeColorField": null,
-            "strokeColorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear"
-          }
-        },
-        {
-          "id": "07drdnc",
-          "type": "point",
-          "config": {
-            "dataId": "9jgb8y7",
-            "label": "sink",
-            "color": [240, 237, 234],
-            "columns": {
-              "lat": "sink_lat",
-              "lng": "sink_lon",
-              "altitude": null
-            },
-            "isVisible": false,
-            "visConfig": {
-              "radius": 6,
-              "fixedRadius": false,
-              "opacity": 0.01,
-              "outline": false,
-              "thickness": 2,
-              "strokeColor": null,
-              "colorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
-              },
-              "strokeColorRange": {
-                "name": "Global Warming",
-                "type": "sequential",
-                "category": "Uber",
-                "colors": ["#5A1846", "#900C3F", "#C70039", "#E3611C", "#F1920E", "#FFC300"]
-              },
-              "radiusRange": [0, 50],
-              "filled": true
-            },
-            "textLabel": [
-              {
-                "field": null,
-                "color": [255, 255, 255],
-                "size": 8,
-                "offset": [0, 0],
-                "anchor": "start",
-                "alignment": "center"
-              }
-            ]
-          },
-          "visualChannels": {
-            "colorField": null,
-            "colorScale": "quantile",
-            "strokeColorField": null,
-            "strokeColorScale": "quantile",
-            "sizeField": null,
-            "sizeScale": "linear"
-          }
-        },
-        {
-          "id": "szehw1b",
-          "type": "arc",
-          "config": {
-            "dataId": "9jgb8y7",
-            "label": "mincut",
-            "color": [146, 38, 198],
-            "columns": {
-              "lat0": "source_lat",
-              "lng0": "source_lon",
-              "lat1": "sink_lat",
-              "lng1": "sink_lon"
-            },
-            "isVisible": false,
-            "visConfig": {
-              "opacity": 0.04,
-              "thickness": 0.5,
-              "colorRange": {
-                "name": "Custom Palette",
-                "type": "custom",
-                "category": "Custom",
-                "colors": ["#FFFFFF", "#d8d8d8", "#c5c5c5", "#F8C0AA", "#DD7755", "#C22E00"]
-              },
-              "sizeRange": [0, 59.9],
-              "targetColor": null
-            },
-            "textLabel": [
-              {
-                "field": null,
-                "color": [255, 255, 255],
-                "size": 18,
-                "offset": [0, 0],
-                "anchor": "start",
-                "alignment": "center"
-              }
-            ]
-          },
-          "visualChannels": {
-            "colorField": {
-              "name": "non_reachable",
-              "type": "integer"
-            },
-            "colorScale": "quantile",
-            "sizeField": {
-              "name": "cut_value",
-              "type": "real"
-            },
-            "sizeScale": "log"
-          }
         }
       ],
       "interactionConfig": {
         "tooltip": {
           "fieldsToShow": {
-            "7b2tp": [
-              "edge_id",
-              "source_id",
-              "sink_id",
-              "source_name",
-              "sink_name",
-              "Record Count",
-              "delay",
-              "delay / travel time"
-            ],
-            "9jgb8y7": ["cut_value", "reachable", "non_reachable", "source_id", "source_name", "sink_id", "sink_name"],
             "r7j9tcouu": [
               "edge_id",
               "source_name",
               "sink_name",
               "record_count",
               "scheduled",
+              "relative_deviation_factor",
               "flow",
-              "relative_deviation_factor"
+              "abs_median_deviation"
+            ],
+            "gdzs84xm0o": [
+              "cut_value",
+              "reachable",
+              "non_reachable",
+              "source_id",
+              "source_name",
+              "sink_id",
+              "sink_name"
             ]
           },
           "enabled": true
@@ -306,10 +191,10 @@
     "mapState": {
       "bearing": 0,
       "dragRotate": true,
-      "latitude": 59.719031403986584,
-      "longitude": 17.48289114957023,
+      "latitude": 59.834566429395274,
+      "longitude": 17.593930800704506,
       "pitch": 60,
-      "zoom": 9.920894627985861,
+      "zoom": 8.863636905433356,
       "isSplit": false
     },
     "mapStyle": {
